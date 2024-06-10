@@ -1,0 +1,201 @@
+/*#region animation */
+[data-anim="fromLeft"] {
+    animation: fromLeft 1s forwards;
+}
+[data-anim="fromRight"] {
+    animation: fromRight 1s forwards;
+}
+[data-anim="toBottomBtn"] {
+    animation: toBottomBtn 1s forwards;
+}
+[data-anim="toRight"] {
+    animation: toRight 1s forwards;
+}
+[data-anim="toLeft"] {
+    animation: toLeft 1s forwards;
+}
+[data-anim="fromBottom"] {
+    animation: fromBottom 1s forwards;
+}
+[data-anim="fromBottomBtn"] {
+    animation: fromBottomBtn 1s forwards;
+}
+[data-anim="toBottomForm"] {
+    animation: toBottomForm 1s forwards;
+}
+@keyframes toRight {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1000px;
+    }
+}
+@keyframes toLeft {
+    from {
+        left: 0;
+    }
+    to {
+        left: 1000px;
+    }
+}
+@keyframes fromRight {
+    from {
+        left: -1000px;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes fromLeft {
+    from {
+        left: 1000px;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes toBottomBtn {
+    from {
+        top: 0;
+    }
+    to {
+        top: 600px;
+    }
+}
+@keyframes toBottomForm {
+    from {
+        top: 50%;
+    }
+    to {
+        top: 1000px;
+    }
+}
+@keyframes fromBottom {
+    from {
+        top: 600px;
+    }
+    to {
+        top: 50%;
+    }
+}
+@keyframes fromBottomBtn {
+    from {
+        top: 600px;
+    }
+    to {
+        top: 0;
+    }
+}
+/*#endregion animation */
+
+.text-opacity {
+    color: rgba(106, 106, 106, 0.784);
+}
+.parallax {
+    height: 600px;
+    background-image: url(../imgs/parallax.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.opacity {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 2;
+    background-color: rgba(72, 72, 72, 0.382);
+}
+.parallax__block {
+    position: absolute;
+    z-index: 200;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.parallax__block-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-color-light);
+}
+.parallax__block-header > h2 {
+    position: relative;
+    /* left: -1000px; */
+    transition: 1s;
+}
+.parallax__block-header > p {
+    position: relative;
+    /* left: 1000px; */
+    transition: 1s;
+}
+.parallax__block-button button {
+    position: relative;
+    width: 250px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+/* parallax__block-hiden */
+.parallax-form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-color-light);
+    border-radius: var(--border-r-12);
+    width: 500px;
+    left: 50%;
+    top: 600px;
+    transform: translate(-50%, -50%);
+}
+.parallax-form form {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+}
+.parallax-form .form-line {
+    display: flex;
+    justify-content: space-between;
+}
+.parallax-form-close {
+    position: relative;
+    right: 20px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    align-self: end;
+    background-color: var(--text-color-red-light);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.parallax-form__btn-submit {
+    cursor: pointer;
+}
+.submit-form {
+    position: absolute;
+    background-color: var(--text-color-light);
+    left: 0;
+    top: 0;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-r-12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
