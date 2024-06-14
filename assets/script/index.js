@@ -1,16 +1,13 @@
-const popupIcon = document.querySelector(".fixed-link");
+const popupIcon = document.querySelector(".popup-fixed");
 const popupLinkIcon = document.querySelector(".fixed-link-icon");
 const popupWindow = document.querySelector(".popup-window");
 const popupWrapper = document.querySelector(".popup-wrapper");
 const popup = document.querySelector(".popup");
 
-const event = new Event("click");
-
-popup.addEventListener("click", (event) => {
-    if (event.target.closest(".fixed-link")) {
+popup.addEventListener("mouseup", (event) => {
+    if (event.target.closest(".popup-fixed")) {
         if (popupIcon.dataset.popupShow === "false") {
             event.target.addEventListener("click", (event) => {
-                console.log(1);
                 popupIcon.dataset.popupShow = "true";
                 popupWrapper.style.overflow = "visible";
                 popupWindow.style.top = "-510px";

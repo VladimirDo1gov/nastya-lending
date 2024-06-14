@@ -24,6 +24,7 @@
 /*#endregion animation */
 
 /*#region fixed-icon */
+
 .popup {
     position: fixed;
     bottom: 30px;
@@ -54,7 +55,6 @@
     width: 300px;
     transition: 0.5s;
 }
-
 .popup-window__wrapper {
     display: flex;
     flex-direction: column;
