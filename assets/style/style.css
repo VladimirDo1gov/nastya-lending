@@ -43,8 +43,9 @@ body {
     --box-shadow-light-hover: 2px 2px 6px rgb(175, 175, 175);
     --box-shadow-dark: 2px 2px 4px rgb(33, 33, 33);
 }
+
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     /* overflow-x: hidden; */
 }

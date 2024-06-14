@@ -1,9 +1,43 @@
+/*#region header-fixed */
+header {
+    position: relative;
+}
+[data-header="fixed"] {
+    position: fixed;
+    z-index: 9999 !important;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    top: 0;
+}
+[data-anim="move"] {
+    animation-name: animHeader;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@keyframes animHeader {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+/*#endregion header-fixed */
 .menu {
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    padding: 4px;
+    padding: 6px 12px;
     background-color: rgb(38, 38, 38);
 }
 .menu__icon {
@@ -16,7 +50,7 @@
 }
 .menu__list {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -40,8 +74,41 @@
 }
 .menu__button button {
     width: 220px;
-    padding: 6px;
+    background-color: teal;
+    border: none;
+    border-radius: 8px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    padding: 6px 16px;
 }
 .menu__button img {
     width: 20px;
 }
+.theme-toggle {
+    padding: 0 30px;
+}
+.theme-toggle > img {
+    width: 30px;
+    cursor: pointer;
+}
+
+/*#region header-burger */
+[data-menu-position="absolute"] {
+    position: absolute;
+    top: 200px;
+}
+.menu-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 28px;
+    cursor: pointer;
+}
+.menu-burger > span {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(217, 217, 217, 0.267);
+}
+/*#endregion header-burger */
