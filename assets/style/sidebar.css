@@ -1,0 +1,59 @@
+@keyframes sidebarShow {
+    from {
+        left: -600px;
+    }
+    to {
+        left: 0;
+    }
+}
+[data-sidebar-anim="sidebarShow"] {
+    animation: sidebarShow 1s forwards;
+}
+[data-overflow="hidden"] {
+    overflow: hidden;
+}
+.sidebar {
+    position: absolute;
+    background-color: aliceblue;
+    left: -600px;
+    top: 0;
+    width: 36%;
+    height: 100%;
+    z-index: 9999;
+}
+[data-background="opacity"] {
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(102, 102, 102, 0.621);
+    z-index: 9998;
+}
+[data-sidebar-position="absolute"] {
+    position: absolute;
+    left: -2000px;
+}
+.sidebar-wrapper {
+}
+.sidebar__menu {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar__menu-item {
+}
+.sidebar__menu-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.sidebar__block-icon > img {
+    width: 30px;
+}
+.sidebar__block-text {
+}
+.sidebar__menu-button {
+}
+.sidebar__menu-close > button {
+}

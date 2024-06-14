@@ -1,5 +1,14 @@
 const header = document.querySelector("header");
 const menu = document.querySelector(".menu");
+window.addEventListener("load", () => {
+    if (pageYOffset > header.offsetHeight) {
+        header.dataset.header = "fixed";
+        header.dataset.anim = "move";
+    } else {
+        header.dataset.header = "";
+        header.dataset.anim = "";
+    }
+});
 window.addEventListener("scroll", (event) => {
     if (pageYOffset > header.offsetHeight) {
         header.dataset.header = "fixed";
