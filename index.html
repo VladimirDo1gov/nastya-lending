@@ -4,9 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/style/normalize.css" />
+        <link rel="stylesheet" href="./assets/style/swiper/swiper.css" />
         <link rel="stylesheet" href="./assets/style/style.css" />
+        <link rel="stylesheet" href="./assets/style/popup-window.css" />
+        <link rel="stylesheet" href="./assets/style/caces.css" />
         <link rel="stylesheet" href="./assets/style/navbar.css" />
         <link rel="stylesheet" href="./assets/style/parallax.css" />
+        <link rel="stylesheet" href="./assets/style/about.css" />
+        <link rel="stylesheet" href="./assets/style/pricelist.css" />
+        <link rel="stylesheet" href="./assets/style/swiper/nastya-swiper.css" />
+        <link rel="stylesheet" href="./assets/style/advantages.css" />
+        <link rel="stylesheet" href="./assets/style/conditions.css" />
+        <link rel="stylesheet" href="./assets/style/articles.css" />
+        <link rel="stylesheet" href="./assets/style/footer.css" />
         <title>Document</title>
     </head>
     <body>
@@ -34,7 +44,48 @@
             </section>
         </header>
         <main>
-            <section>
+            <div class="popup">
+                <div class="popup-wrapper">
+                    <div class="popup-window">
+                        <div class="popup-window__wrapper">
+                            <div class="popup__header">
+                                <div class="popup__header-icon">
+                                    <img src="./assets/icons/direct.png" alt="" />
+                                </div>
+                                <div class="popup___header-text">
+                                    <h3>Title</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, qui!</p>
+                                </div>
+                            </div>
+                            <div class="popup__message">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, debitis?</p>
+                            </div>
+                            <div class="popup__links-group">
+                                <div class="popup__link">
+                                    <img src="./assets/icons/free-icon-telegram-2504941.png" alt="" />
+                                    <p>Telegram</p>
+                                </div>
+                                <div class="popup__link">
+                                    <img src="./assets/icons/free-icon-telegram-2504941.png" alt="" />
+                                    <p>Telegram</p>
+                                </div>
+                                <div class="popup__link">
+                                    <img src="./assets/icons/free-icon-telegram-2504941.png" alt="" />
+                                    <p>Telegram</p>
+                                </div>
+                            </div>
+                            <div class="popup__offer">
+                                <p>Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных и с <a href="#">политикой конфедициальности</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fixed-link" data-popup-show="false">
+                        <img class="fixed-link-icon" src="./assets/icons/whatsup.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <!-- parallax -->
+            <section class="section-padding">
                 <div class="container">
                     <div class="parallax">
                         <div class="opacity"></div>
@@ -67,9 +118,389 @@
                     </div>
                 </div>
             </section>
+            <!-- about-me -->
+            <section class="section-padding">
+                <div class="section-title">
+                    <h2>Обо мне</h2>
+                </div>
+                <div class="container">
+                    <article class="about-area">
+                        <div class="about">
+                            <div class="about__img">
+                                <img src="./assets/imgs/L1L_hdDWbh4.jpg" alt="img" />
+                            </div>
+                            <div class="about__text">
+                                <h2>Title</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo ratione laboriosam neque officia tenetur corrupti, aliquid dolore cupiditate earum laborum quaerat velit doloribus at quis unde atque illo? Earum totam laudantium quam modi maiores vel in accusantium magni, aspernatur temporibus recusandae consequatur at consectetur dolorem, velit, culpa nobis officiis. Cumque.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- why choose me -->
+            <section class="section-padding">
+                <div class="section-title">
+                    <h2>Почему выбирают меня</h2>
+                </div>
+                <div class="container">
+                    <article class="advantages-area">
+                        <div class="advantages-background"></div>
+                        <div class="advantages">
+                            <div class="advantages__block">
+                                <div class="advantages__block-icon">
+                                    <img src="./assets/icons/advantages-4.png" alt="img" />
+                                </div>
+                                <div class="advantages__block-text">
+                                    <h3>Окончившие студенты</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae distinctio consequuntur quisquam quia praesentium doloribus veniam vero ipsa voluptates saepe.</p>
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <div class="advantages__block-icon">
+                                    <img src="./assets/icons/advantages-1.png" alt="img" />
+                                </div>
+                                <div class="advantages__block-text">
+                                    <h3>Количество работ</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae distinctio consequuntur quisquam quia praesentium doloribus veniam vero ipsa voluptates saepe.</p>
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <div class="advantages__block-icon">
+                                    <img src="./assets/icons/advantages-2.png" alt="img" />
+                                </div>
+                                <div class="advantages__block-text">
+                                    <h3>Высшие образования</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae distinctio consequuntur quisquam quia praesentium doloribus veniam vero ipsa voluptates saepe.</p>
+                                </div>
+                            </div>
+                            <div class="advantages__block">
+                                <div class="advantages__block-icon">
+                                    <img src="./assets/icons/advantages-3.png" alt="img" />
+                                </div>
+                                <div class="advantages__block-text">
+                                    <h3>Преподаватель</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae distinctio consequuntur quisquam quia praesentium doloribus veniam vero ipsa voluptates saepe.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- pricelist -->
+            <section class="section-padding">
+                <div class="section-title">
+                    <h2>Стоимость услуг</h2>
+                </div>
+                <div class="container">
+                    <article class="pricelist-area">
+                        <div class="pricelist">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="pricelist__block">
+                                            <h2 class="pricelist-title">Курсовая</h2>
+                                            <div class="pricelist-inner">
+                                                <div class="priselist-services">
+                                                    <p>Текст дипломной работы</p>
+                                                    <p>Презентация и речь</p>
+                                                    <p>Производственная практика</p>
+                                                    <p>Ученая практика</p>
+                                                </div>
+                                                <div class="pricelist-price">
+                                                    <p>50000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                </div>
+                                                <div class="pricelist-description">
+                                                    <p>Обьем дипломной работы до 90-100 стр. Оформление строго по предоставленным методическим указаниям. Доработки в рамках плана. Заказать можно, как отдельно текстовую часть, так и полный комплект, или диплом + презентацию с речью - на ваше усмотрение. Стоимость презентации указана за 15 слайдов. Каждый доп. слайд + 200₽</p>
+                                                </div>
+                                            </div>
+                                            <div class="pricelist-btn">
+                                                <button>Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pricelist__block">
+                                            <h2 class="pricelist-title">Курсовая</h2>
+                                            <div class="pricelist-inner">
+                                                <div class="priselist-services">
+                                                    <p>Текст дипломной работы</p>
+                                                    <p>Презентация и речь</p>
+                                                    <p>Производственная практика</p>
+                                                    <p>Ученая практика</p>
+                                                </div>
+                                                <div class="pricelist-price">
+                                                    <p>50000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                </div>
+                                                <div class="pricelist-description">
+                                                    <p>Обьем дипломной работы до 90-100 стр. Оформление строго по предоставленным методическим указаниям. Доработки в рамках плана. Заказать можно, как отдельно текстовую часть, так и полный комплект, или диплом + презентацию с речью - на ваше усмотрение. Стоимость презентации указана за 15 слайдов. Каждый доп. слайд + 200₽</p>
+                                                </div>
+                                            </div>
+                                            <div class="pricelist-btn">
+                                                <button>Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pricelist__block">
+                                            <h2 class="pricelist-title">Курсовая</h2>
+                                            <div class="pricelist-inner">
+                                                <div class="priselist-services">
+                                                    <p>Текст дипломной работы</p>
+                                                    <p>Презентация и речь</p>
+                                                    <p>Производственная практика</p>
+                                                    <p>Ученая практика</p>
+                                                </div>
+                                                <div class="pricelist-price">
+                                                    <p>50000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                </div>
+                                                <div class="pricelist-description">
+                                                    <p>Обьем дипломной работы до 90-100 стр. Оформление строго по предоставленным методическим указаниям. Доработки в рамках плана. Заказать можно, как отдельно текстовую часть, так и полный комплект, или диплом + презентацию с речью - на ваше усмотрение. Стоимость презентации указана за 15 слайдов. Каждый доп. слайд + 200₽</p>
+                                                </div>
+                                            </div>
+                                            <div class="pricelist-btn">
+                                                <button>Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pricelist__block">
+                                            <h2 class="pricelist-title">Курсовая</h2>
+                                            <div class="pricelist-inner">
+                                                <div class="priselist-services">
+                                                    <p>Текст дипломной работы</p>
+                                                    <p>Презентация и речь</p>
+                                                    <p>Производственная практика</p>
+                                                    <p>Ученая практика</p>
+                                                </div>
+                                                <div class="pricelist-price">
+                                                    <p>50000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                </div>
+                                                <div class="pricelist-description">
+                                                    <p>Обьем дипломной работы до 90-100 стр. Оформление строго по предоставленным методическим указаниям. Доработки в рамках плана. Заказать можно, как отдельно текстовую часть, так и полный комплект, или диплом + презентацию с речью - на ваше усмотрение. Стоимость презентации указана за 15 слайдов. Каждый доп. слайд + 200₽</p>
+                                                </div>
+                                            </div>
+                                            <div class="pricelist-btn">
+                                                <button>Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pricelist__block">
+                                            <h2 class="pricelist-title">Курсовая</h2>
+                                            <div class="pricelist-inner">
+                                                <div class="priselist-services">
+                                                    <p>Текст дипломной работы</p>
+                                                    <p>Презентация и речь</p>
+                                                    <p>Производственная практика</p>
+                                                    <p>Ученая практика</p>
+                                                </div>
+                                                <div class="pricelist-price">
+                                                    <p>50000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                    <p>5000</p>
+                                                </div>
+                                                <div class="pricelist-description">
+                                                    <p>Обьем дипломной работы до 90-100 стр. Оформление строго по предоставленным методическим указаниям. Доработки в рамках плана. Заказать можно, как отдельно текстовую часть, так и полный комплект, или диплом + презентацию с речью - на ваше усмотрение. Стоимость презентации указана за 15 слайдов. Каждый доп. слайд + 200₽</p>
+                                                </div>
+                                            </div>
+                                            <div class="pricelist-btn">
+                                                <button>Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- working conditions -->
+            <section class="section-padding">
+                <div class="section-title">
+                    <h2>Порядок работы</h2>
+                </div>
+                <div class="container">
+                    <article class="conditions-area">
+                        <div class="conditions">
+                            <div class="conditions__process">
+                                <div class="conditions__process-block">
+                                    <div class="conditions__process-step">
+                                        <p>Внесение предоплаты</p>
+                                    </div>
+                                    <div class="conditions__process-arrow">
+                                        <img src="./assets/icons/arrow-to-right.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="conditions__process-block">
+                                    <div class="conditions__process-step">
+                                        <p>Выбор темы и утверждение плана работы</p>
+                                    </div>
+                                    <div class="conditions__process-arrow">
+                                        <img src="./assets/icons/arrow-to-right.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="conditions__process-block">
+                                    <div class="conditions__process-step">
+                                        <p>Работа по частям, дробная оплата</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Сначала вы вносите предоплату, бронируя за собой место на работу. Когда появляются темы - мы совместно с вами и руководителем обсуждаем, выбираем тему, пишем, корректируем и утверждаем окончательный план. Затем начинаем работать по частям. Оплата дробная - делим на 3-4 платежа равными суммами.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- cases -->
+            <section class="section-padding">
+                <div class="section-title">
+                    <h2>Кейсы</h2>
+                </div>
+                <div class="container">
+                    <article class="caces-area">
+                        <div class="caces">
+                            <div class="swiper-caces">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-1.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-2.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-3.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-4.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-5.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-6.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-7.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-8.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-9.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="caces-img">
+                                            <img src="./assets/imgs/cases/case-10.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- arcticels -->
+            <section class="section-padding">
+                <div class="section-title">
+                    <h2>Полезные статьи</h2>
+                </div>
+                <div class="container">
+                    <article class="articles-area">
+                        <div class="articles">
+                            <div class="article-block">
+                                <h3>Title</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus facilis dolor? Consequuntur quibusdam facilis eos enim ullam perspiciatis deserunt maiores quia id dicta laudantium fugit eum dolorem doloribus explicabo eveniet culpa, dolores blanditiis cumque soluta. Ratione vitae et obcaecati laudantium assumenda, beatae blanditiis quaerat autem corporis fugit neque ut!</p>
+                            </div>
+                            <div class="article-block">
+                                <h3>Title</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus facilis dolor? Consequuntur quibusdam facilis eos enim ullam perspiciatis deserunt maiores quia id dicta laudantium fugit eum dolorem doloribus explicabo eveniet culpa, dolores blanditiis cumque soluta. Ratione vitae et obcaecati laudantium assumenda, beatae blanditiis quaerat autem corporis fugit neque ut!</p>
+                            </div>
+                            <div class="article-block">
+                                <h3>Title</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus facilis dolor? Consequuntur quibusdam facilis eos enim ullam perspiciatis deserunt maiores quia id dicta laudantium fugit eum dolorem doloribus explicabo eveniet culpa, dolores blanditiis cumque soluta. Ratione vitae et obcaecati laudantium assumenda, beatae blanditiis quaerat autem corporis fugit neque ut!</p>
+                            </div>
+                            <div class="article-block">
+                                <h3>Title</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla accusamus facilis dolor? Consequuntur quibusdam facilis eos enim ullam perspiciatis deserunt maiores quia id dicta laudantium fugit eum dolorem doloribus explicabo eveniet culpa, dolores blanditiis cumque soluta. Ratione vitae et obcaecati laudantium assumenda, beatae blanditiis quaerat autem corporis fugit neque ut!</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
-        <footer></footer>
+        <footer>
+            <section class="section-padding">
+                <div class="container">
+                    <article class="footer-area">
+                        <div class="footer-col">
+                            <div class="footer-logo">
+                                <img src="./assets/icons/logo.png" alt="img" />
+                                <h3>logoType</h3>
+                            </div>
+                            <div class="footer-text">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magni quod sed molestiae illo saepe, maxime sunt sint corrupti officia.</p>
+                            </div>
+                            <div class="foter-links">
+                                <div class="footer-link">
+                                    <a href=""><img src="./assets/icons/free-icon-telegram-2504941.png" alt="logo vk" /></a>
+                                </div>
+                                <div class="footer-link">
+                                    <a href=""><img src="./assets/icons/free-icon-instagram-2111463.png" alt="logo inst" /></a>
+                                </div>
+                                <div class="footer-link">
+                                    <a href=""><img src="./assets/icons/free-icon-whatsapp-2504957.png" alt="logo whatsup" /></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-col"></div>
+                        <div class="footer-col"></div>
+                    </article>
+                </div>
+                <div class="footer-border">
+                    <div class="footer-border-text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ad!</p></div>
+                </div>
+            </section>
+        </footer>
         <script src="./assets/script/index.js"></script>
         <script src="./assets/script/parallax.js"></script>
+        <script src="./assets/script/about.js"></script>
+        <script src="./assets/script/conditions.js"></script>
+        <script defer src="./assets/script/swiper/swiper.js"></script>
+        <script defer src="./assets/script/caces.js"></script>
+        <script defer src="./assets/script/swiper.js"></script>
     </body>
 </html>

@@ -1,0 +1,43 @@
+.advantages-area {
+    position: relative;
+    z-index: 2;
+}
+.advantages-background {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(74, 218, 234, 0.225);
+    z-index: -1;
+}
+.advantages {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    max-width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(300px, 400px));
+    grid-template-rows: repeat(2, minmax(200px, 300px));
+    justify-content: center;
+    gap: 24px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.advantages__block {
+    padding: 10px;
+    border: 1px solid rgba(193, 193, 193, 0.234);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.advantages__block-icon {
+    text-align: center;
+}
+.advantages__block-icon > img {
+    max-width: 100px;
+}
+.advantages__block-text {
+    /* border: 1px solid black; */
+    text-align: center;
+}

@@ -2,6 +2,9 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+body {
+    font-family: sans-serif;
+}
 :root {
     /* text */
     --text-color-light: rgb(240, 240, 240);
@@ -43,5 +46,16 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid black;
+    /* overflow-x: hidden; */
+}
+.section-padding {
+    padding: 40px 10px;
+}
+.section-title {
+    text-align: center;
+    padding-bottom: 40px;
+}
+.section-title > h2 {
+    font-size: 32px;
+    letter-spacing: 1px;
 }

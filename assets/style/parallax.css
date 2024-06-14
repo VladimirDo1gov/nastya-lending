@@ -101,6 +101,9 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    -webkit-box-shadow: inset 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
 }
 .opacity {
     position: absolute;

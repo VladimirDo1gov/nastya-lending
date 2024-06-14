@@ -1,0 +1,33 @@
+.articles-area {
+}
+.articles {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 400px));
+    grid-template-rows: repeat(2, minmax(200px, 250px));
+    gap: 32px;
+    justify-content: center;
+}
+.article-block {
+    border: 1px solid rgba(189, 189, 189, 0.522);
+    box-shadow: var(--box-shadow-light);
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.article-block > h3 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+.article-block > p {
+    font-size: inherit;
+    color: inherit;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}

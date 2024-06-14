@@ -1,0 +1,40 @@
+.pricelist-area {
+}
+.pricelist__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-light);
+    border: var(--border-color-light);
+}
+.pricelist-title {
+}
+.pricelist-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.pricelist-description {
+    grid-column: 1/3;
+}
+.priselist-services > p,
+.pricelist-price > p {
+    text-align: left;
+    border-bottom: 1px solid rgba(178, 178, 178, 0.416);
+    padding-bottom: 12px;
+}
+.pricelist-price > p {
+    text-align: center;
+}
+
+.pricelist-btn button {
+    padding: 10px 60px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 99, 99);
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+}

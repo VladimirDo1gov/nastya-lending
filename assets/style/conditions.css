@@ -1,0 +1,48 @@
+.conditions-area {
+}
+.conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.conditions__process {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.conditions__process-block {
+    display: flex;
+    gap: 24px;
+}
+.conditions__process-step {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+.conditions__process-step > p {
+    width: 100%;
+    display: block;
+}
+.conditions__process-arrow img {
+    width: 100px;
+}
+.conditions-btn > button {
+    padding: 16px 100px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 84, 84);
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.conditions > p {
+    letter-spacing: 1px;
+    text-align: center;
+    max-width: 800px;
+}
