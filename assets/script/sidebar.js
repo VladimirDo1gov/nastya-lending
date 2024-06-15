@@ -9,4 +9,8 @@ btnShow.addEventListener("click", (event) => {
     document.body.dataset.overflow = "hidden";
 });
 
-btnClose.addEventListener();
+btnClose.addEventListener("click", (event) => {
+    sidebar.dataset.sidebarAnim = "sidebarHide";
+    backgroundOpacity.dataset.background = "";
+    document.body.dataset.overflow = "";
+});

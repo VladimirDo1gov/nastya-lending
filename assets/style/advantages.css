@@ -1,5 +1,7 @@
 .advantages-area {
     position: relative;
+    overflow: hidden;
+    height: 800px;
     z-index: 2;
 }
 .advantages-background {
@@ -23,6 +25,7 @@
     background-color: rgb(255, 255, 255);
     padding: 10px;
 }
+
 .advantages__block {
     padding: 10px;
     border: 1px solid rgba(193, 193, 193, 0.234);
