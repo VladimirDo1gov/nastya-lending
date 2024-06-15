@@ -1,17 +1,18 @@
 const parallaxElements = {
-    h2: document.querySelectorAll(".parallax__block-header > h2"),
+    h1: document.querySelector(".parallax__block-header > h1"),
+    h2: document.querySelector(".parallax__block-header > h2"),
     p: document.querySelector(".parallax__block-header > p"),
     btn: document.querySelector(".parallax__block-button button"),
     form: document.querySelector(".parallax-form"),
     close: document.querySelector(".parallax-form-close"),
+    hide: document.querySelector(".hide-block"),
 };
 
 const animParallaxElements = {
     // Появление хедера
     showHeader() {
-        for (let elem of parallaxElements.h2) {
-            elem.dataset.anim = "fromLeft";
-        }
+        parallaxElements.h1.dataset.anim = "fromLeft";
+        parallaxElements.h2.dataset.anim = "fromLeft";
         parallaxElements.p.dataset.anim = "fromRight";
         parallaxElements.btn.dataset.anim = "fromBottomBtn";
     },
@@ -22,17 +23,15 @@ const animParallaxElements = {
         }
         parallaxElements.btn.dataset.anim = "toBottomBtn";
         parallaxElements.p.dataset.anim = "toRight";
-        for (let elem of parallaxElements.h2) {
-            elem.dataset.anim = "toLeft";
-        }
-        parallaxElements.form.dataset.anim = "fromBottom";
+        parallaxElements.h1.dataset.anim = "toLeft";
+        parallaxElements.h2.dataset.anim = "toLeft";
+        parallaxElements.form.dataset.anim = "fromBottomForm";
     },
     // Скрытие формы
     hideForm() {
         parallaxElements.form.dataset.anim = "toBottomForm";
-        for (let elem of parallaxElements.h2) {
-            elem.dataset.anim = "fromLeft";
-        }
+        parallaxElements.h1.dataset.anim = "fromLeft";
+        parallaxElements.h2.dataset.anim = "fromLeft";
         parallaxElements.p.dataset.anim = "fromRight";
         parallaxElements.btn.dataset.anim = "fromBottomBtn";
     },
@@ -44,13 +43,22 @@ parallaxElements.btn.addEventListener("click", animParallaxElements.hideHeader);
 
 parallaxElements.close.addEventListener("click", animParallaxElements.hideForm);
 
+// Скрывает форму заявки
 parallaxElements.form.addEventListener("submit", (event) => {
     event.preventDefault();
-    let div = document.createElement("div");
-    div.className = "submit-form";
-    div.textContent = "Успешно";
-    event.target.append(div);
+    parallaxElements.hide.dataset.anim = "showHideBlock";
     setTimeout(() => {
         animParallaxElements.hideForm();
-    }, 1500);
+        setTimeout(() => {
+            parallaxElements.hide.dataset.anim = "";
+        }, 750);
+    }, 750);
 });
+
+// Проверка алидности заполненных данных
+const formElements = {
+    firstname: document.forms.application.elements.firstname.value,
+    secondname: document.forms.application.elements.secondname.value,
+    parentname: document.forms.application.elements.parentname.value,
+    telephone: document.forms.application.elements.telephone.value,
+};

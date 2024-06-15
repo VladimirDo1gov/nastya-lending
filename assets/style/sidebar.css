@@ -78,13 +78,6 @@
     margin-top: 28px;
 }
 .sidebar__menu-button > button {
-    border: none;
-    border-radius: 12px;
-    width: 250px;
-    height: 35px;
-    background-color: teal;
-    color: white;
-    letter-spacing: 2px;
 }
 .sidebar__menu-close {
     align-self: flex-end;

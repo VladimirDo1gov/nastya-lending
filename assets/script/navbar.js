@@ -38,9 +38,11 @@ const windowEvents = {
             if (pageYOffset > navbarElements.header.offsetHeight) {
                 navbarElements.header.dataset.header = "fixed";
                 navbarElements.header.dataset.anim = "move";
+                document.body.classList.add("pt-80");
             } else {
                 navbarElements.header.dataset.header = "";
                 navbarElements.header.dataset.anim = "";
+                document.body.classList.remove("pt-80");
             }
         });
     },
