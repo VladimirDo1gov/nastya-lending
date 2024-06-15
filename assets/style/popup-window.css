@@ -59,7 +59,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    border: 1px solid rgba(164, 164, 164, 0.43);
+    border: var(--border-opacity);
     border-radius: 12px;
     background-color: aliceblue;
 }
@@ -93,7 +93,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    border: 1px solid rgba(164, 164, 164, 0.43);
+    border: var(--border-opacity);
     border-radius: 12px;
     padding: 0 6px;
 }

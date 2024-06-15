@@ -6,6 +6,7 @@ body {
     font-family: sans-serif;
     position: relative;
 }
+
 :root {
     /* text */
     --text-color-light: rgb(240, 240, 240);
@@ -23,28 +24,93 @@ body {
     --bg-light: rgb(235, 235, 235);
     --bg-green: rgb(41, 155, 155);
     --bg-blue: rgb(73, 134, 194);
+    --bg-advantages-light: rgba(74, 218, 234, 0.225);
     --bg--dark-grey: rgb(37, 37, 37);
     --bg-dark: rgb(24, 24, 24);
     --bg-red: rgb(237, 79, 79);
-    /* font size */
-    --fs-sm: 14px;
-    --fs-md: 16px;
-    --fs-lg: 20px;
+    --bg-opacity-dark: rgba(72, 72, 72, 0.382);
     /* border */
-    --border-color-light: 1px solid rgb(211, 211, 211);
+    --border-color-light: 1px solid rgba(211, 211, 211, 0.442);
     --border-color-dark: 1px solid rgb(19, 19, 19);
+    --border-opacity: 1px solid rgba(178, 178, 178, 0.416);
     --border-color-md: 1px solid rgb(143, 143, 143);
     --border-r-12: 12px;
     --border-r-6: 6px;
     --border-r-100: 100%;
     --border-r-top: 6px 6px 0 0;
     --border-r-bottom: 0 0 6px 6px;
-    /*box-shadow-style */
+    /* box-shadow-style */
     --box-shadow-light: 2px 2px 4px rgb(175, 175, 175);
     --box-shadow-light-hover: 2px 2px 6px rgb(175, 175, 175);
     --box-shadow-dark: 2px 2px 4px rgb(33, 33, 33);
+    --box-shadow-inset-dark: inset 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
+    /* gradient */
+    --gradient-red: linear-gradient(to right, #f47c6d, #ff624e, #f47c6d);
+    --gradient-green: linear-gradient(to right, #339468, #3ad59a, #339468);
+    --gradient-blue: linear-gradient(to right, #3eabc1, #59bdd1, #3eabc1);
+    --gradient-dark: linear-gradient(to right, #262626, #514f4f, #262626);
+    --gradient-light: linear-gradient(to right, #e6e6e6, #f3f1f1, #e6e6e6);
 }
 
+/*#region btn */
+.btn-default {
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.btn-sm {
+    width: 100px;
+}
+.btn-md {
+    width: 180px;
+}
+.btn-lg {
+    width: 220px;
+}
+.btn-gradient-red {
+    background: linear-gradient(to right, #f47c6d, #ff624e, #f47c6d);
+    background: -webkit-linear-gradient(to right, #f47c6d, #ff624e, #f47c6d);
+    color: var(--text-color-light);
+}
+.btn-gradient-green {
+    background: linear-gradient(to right, #339468, #3ad59a, #339468);
+    background: -webkit-linear-gradient(to right, #339468, #3ad59a, #339468);
+    color: var(--text-color-light);
+}
+.btn-gradient-blue {
+    background: linear-gradient(to right, #3eabc1, #59bdd1, #3eabc1);
+    background: -webkit-linear-gradient(to right, #3eabc1, #59bdd1, #3eabc1);
+    color: var(--text-color-light);
+}
+.btn-gradient-dark {
+    background: linear-gradient(to right, #262626, #514f4f, #262626);
+    background: -webkit-linear-gradient(to right, #262626, #514f4f, #262626);
+    color: var(--text-color-light);
+}
+.btn-gradient-light {
+    background: linear-gradient(to right, #e6e6e6, #f3f1f1, #e6e6e6);
+    background: -webkit-linear-gradient(to right, #e6e6e6, #f3f1f1, #e6e6e6);
+    color: var(--text-color-dark);
+}
+/*#endregion btn */
+
+/*#region icon */
+.icon-sm {
+    width: 40px;
+    height: 40px;
+}
+.icon-md {
+    width: 50px;
+    height: 50px;
+}
+.icon-lg {
+    width: 60px;
+    height: 60px;
+}
+/*#endregion icon */
 .container {
     max-width: 1400px;
     margin: 0 auto;

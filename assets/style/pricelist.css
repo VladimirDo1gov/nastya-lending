@@ -1,6 +1,7 @@
 .pricelist-area {
 }
 .pricelist__block {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,7 +23,7 @@
 .priselist-services > p,
 .pricelist-price > p {
     text-align: left;
-    border-bottom: 1px solid rgba(178, 178, 178, 0.416);
+    border-bottom: var(--border-opacity);
     padding-bottom: 12px;
 }
 .pricelist-price > p {

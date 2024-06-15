@@ -21,7 +21,7 @@
     text-align: center;
     width: 200px;
     height: 100px;
-    border: 1px solid black;
+    border: var(--border-color-dark);
     border-radius: 12px;
 }
 .conditions__process-step > p {
@@ -30,16 +30,6 @@
 }
 .conditions__process-arrow img {
     width: 100px;
-}
-.conditions-btn > button {
-    padding: 16px 100px;
-    border-radius: 12px;
-    border: none;
-    background-color: rgb(255, 84, 84);
-    color: white;
-    font-size: 18px;
-    letter-spacing: 2px;
-    cursor: pointer;
 }
 .conditions > p {
     letter-spacing: 1px;
