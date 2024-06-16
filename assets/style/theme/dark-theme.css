@@ -2,3 +2,23 @@ body {
     background-color: rgb(24, 24, 24);
     color: aliceblue;
 }
+.menu__list-link {
+    color: var(--text-color-light);
+}
+[data-header="fixed"] {
+    background-color: rgb(24, 24, 24);
+}
+.menu-burger > span {
+    background-color: aliceblue;
+}
+.sidebar {
+    background-color: rgb(24, 24, 24);
+}
+.advantages {
+    background-color: rgb(24, 24, 24);
+}
+.pricelist__block {
+    background-color: rgba(90, 90, 90, 0.395);
+    box-shadow: var(--box-shadow-dark);
+    border: var(--border-color-dark);
+}

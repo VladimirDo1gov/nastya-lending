@@ -24,7 +24,7 @@
     overflow: hidden;
 }
 .sidebar {
-    position: absolute;
+    position: fixed;
     background-color: aliceblue;
     left: -600px;
     top: 0;
@@ -54,6 +54,15 @@
     flex-direction: column;
     align-items: start;
 }
+.sidebar__menu-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.sidebar__menu-header .theme-toggle {
+    padding: 0;
+}
 .sidebar__menu-item {
     width: 100%;
     border-bottom: 1px solid rgba(185, 185, 185, 0.566);
@@ -75,12 +84,12 @@
 }
 .sidebar__menu-button {
     align-self: center;
-    margin-top: 28px;
+    margin-top: 32px;
 }
 .sidebar__menu-button > button {
 }
 .sidebar__menu-close {
-    align-self: flex-end;
+    /* align-self: flex-end; */
 }
 .sidebar__menu-close > button {
     border: none;

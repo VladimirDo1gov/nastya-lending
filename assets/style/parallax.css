@@ -105,7 +105,7 @@
 }
 .parallax {
     height: 600px;
-    background-image: url(../imgs/common/5.jpg);
+    background-image: url(../imgs/common/5.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -183,7 +183,7 @@ h1 {
 }
 .parallax-form input {
     border-radius: 6px;
-    border: var(--border-color-light);
+    border: 1px solid transparent;
     padding: 6px;
 }
 .parallax-form textarea {
@@ -250,6 +250,28 @@ h1 {
     font-weight: normal;
 }
 
+/*#region animation */
+.border-red {
+    animation: borderRed 0.2s;
+}
+@keyframes borderRed {
+    0% {
+        border: 1px solid transparent;
+    }
+    25% {
+        border: 1px solid red;
+    }
+    50% {
+        border: 1px solid transparent;
+    }
+    75% {
+        border: 1px solid red;
+    }
+    100% {
+        border: 1px solid transparent;
+    }
+}
+
 [data-anim="showHideBlock"] {
     animation: showHideBlock forwards;
 }
@@ -274,3 +296,4 @@ h1 {
         left: 100%;
     }
 }
+/*#endregion common-animation */

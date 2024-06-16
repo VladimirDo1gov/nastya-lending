@@ -14,6 +14,7 @@ class SwiperControll {
     update() {
         this.swiper.update();
     }
+    hideElements() {}
     get params() {
         console.log(this.swiper.params);
     }
