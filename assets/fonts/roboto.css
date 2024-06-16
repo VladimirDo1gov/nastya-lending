@@ -33,3 +33,7 @@ h2 {
 p {
     font-family: RobotoLight;
 }
+label {
+    font-family: RobotoLight;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,81 @@
+.pricelist-accordion {
+    position: relative;
+    width: 50%;
+    left: 0;
+    top: -10px;
+
+    /* padding: 6px; */
+}
+.accordion-head {
+    /* padding: 16px 10px; */
+    font-size: 16px;
+    width: 100%;
+    background-color: aqua;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+.accordion-head::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #ababab8d transparent;
+    transform: rotate(180deg);
+}
+.accordion-item {
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(185, 185, 185, 0.455);
+    width: 100%;
+}
+.accordion-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+.accordion-input:checked ~ .accordion-head::after {
+    content: "";
+    transform: rotate(0deg);
+    transform: translateY(-65%);
+}
+.accordion-body {
+    transition: 200ms;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    color: #000;
+    text-align: left;
+    font-size: 16px;
+}
+.accordion-body p {
+    text-align: left;
+    font-size: 16px;
+    font-family: Roboto;
+    color: #000;
+}
+.accordion-input:checked ~ .accordion-head {
+    background-color: rgb(207, 226, 255);
+}
+.accordion-input:checked ~ .accordion-body {
+    animation: show;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes show {
+    from {
+        position: absolute;
+    }
+    to {
+        position: relative;
+    }
+}

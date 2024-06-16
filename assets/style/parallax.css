@@ -138,6 +138,7 @@
     gap: 32px;
 }
 .parallax__block-header {
+    width: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -167,6 +168,8 @@ h1 {
     width: 500px;
     left: 50%;
     top: 1000px;
+    padding: 26px;
+    gap: 18px;
     transform: translate(-50%, -50%);
     overflow: hidden;
 }
@@ -174,17 +177,22 @@ h1 {
     gap: 16px;
     display: flex;
     flex-direction: column;
-    padding: 26px;
     z-index: 1;
 }
 .parallax-form .form-line {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 .parallax-form input {
     border-radius: 6px;
     border: 1px solid transparent;
     padding: 6px;
+}
+.parallax-form label {
+    /* width: fit-content; */
+    cursor: pointer;
 }
 .parallax-form textarea {
     resize: none;
@@ -194,18 +202,7 @@ h1 {
     padding: 6px;
 }
 .parallax-form-close {
-    position: relative;
-    right: 20px;
-    top: 10px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
     align-self: end;
-    background-color: var(--text-color-red-light);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
 }
 .parallax-form .hide-block {
     position: absolute;
@@ -232,7 +229,9 @@ h1 {
     font-size: 24px;
     font-weight: normal;
 }
-
+#parallax-select-type {
+    padding: 6px;
+}
 /*#region animation */
 .border-red {
     animation: borderRed 0.2s;
