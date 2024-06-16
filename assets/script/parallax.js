@@ -47,20 +47,6 @@ const formElements = {
         return false;
     },
     /**
-     * @param {} boolean
-     * Проверяет выбрана ли дата
-     */
-    dateReg() {
-        if (this.date.value.length > 0) {
-            return true;
-        }
-        this.date.classList.add("border-red");
-        setTimeout(() => {
-            this.date.classList.remove("border-red");
-        }, 500);
-        return false;
-    },
-    /**
      * @param {} void
      * Обнуляет value всех элементов формы
      */
@@ -70,6 +56,20 @@ const formElements = {
         this.parentname.value = "";
         this.telephone.value = "";
         this.date.value = "";
+    },
+    /**
+     * @param {} void
+     * Получает текущую дату (мусец-день-год)
+     * Задает для инпута value и min
+     *
+     */
+    getDate() {
+        let date = new Date();
+        let day = date.toLocaleDateString().match(/^(?<day>\d{2})/i).groups.day;
+        let month = date.toLocaleDateString().match(/.(?<month>\d{2})./i).groups.month;
+        let year = date.getFullYear();
+        this.date.min = `${year}-${month}-${Number(day) + 7}`;
+        this.date.value = `${year}-${month}-${Number(day) + 7}`;
     },
 };
 
@@ -92,27 +92,33 @@ const parallaxElements = {
         }, 750);
     },
 };
-
 const animParallaxElements = {
-    // Появление хедера
+    /**
+     * @param {} void
+     * Запускает анимации появления хедера
+     */
     showHeader() {
         parallaxElements.h1.dataset.anim = "fromLeft";
         parallaxElements.h2.dataset.anim = "fromLeft";
         parallaxElements.p.dataset.anim = "fromRight";
         parallaxElements.btn.dataset.anim = "fromBottomBtn";
     },
-    // Скрытие хедера
-    hideHeader() {
-        if (parallaxElements.form.querySelector(".submit-form")) {
-            parallaxElements.form.querySelector(".submit-form").remove();
-        }
+    /**
+     * @param {} void
+     * Запускает анимации скрытия хедера и появления формы
+     */
+    showForm() {
         parallaxElements.btn.dataset.anim = "toBottomBtn";
         parallaxElements.p.dataset.anim = "toRight";
         parallaxElements.h1.dataset.anim = "toLeft";
         parallaxElements.h2.dataset.anim = "toLeft";
         parallaxElements.form.dataset.anim = "fromBottomForm";
+        formElements.getDate();
     },
-    // Скрытие формы
+    /**
+     * @param {} void
+     * Запускает анимации скрытия формы и появления хедера
+     */
     hideForm() {
         parallaxElements.form.dataset.anim = "toBottomForm";
         parallaxElements.h1.dataset.anim = "fromLeft";
@@ -123,7 +129,7 @@ const animParallaxElements = {
 };
 
 window.addEventListener("load", animParallaxElements.showHeader, { once: true });
-parallaxElements.btn.addEventListener("click", animParallaxElements.hideHeader);
+parallaxElements.btn.addEventListener("click", animParallaxElements.showForm);
 parallaxElements.close.addEventListener("click", animParallaxElements.hideForm);
 
 // Скрывает форму заявки
@@ -132,8 +138,7 @@ parallaxElements.form.addEventListener("submit", (event) => {
     let tel = formElements.telReg();
     let firstname = formElements.firstnameReg();
     let secondname = formElements.secondnameReg();
-    let date = formElements.dateReg();
-    if (tel && firstname && secondname && date) {
+    if (tel && firstname && secondname) {
         parallaxElements.show();
     }
     if (!tel) {
@@ -145,9 +150,4 @@ parallaxElements.form.addEventListener("submit", (event) => {
     if (!secondname) {
         formElements.secondnameReg();
     }
-    if (!date) {
-        formElements.dateReg();
-    }
 });
-
-// Проверка алидности заполненных данных
