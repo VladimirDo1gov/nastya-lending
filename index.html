@@ -33,13 +33,27 @@
                             <div class="menu__icon">
                                 <img src="./assets/icons/logo.png" alt="" />
                             </div>
-                            <div class="menu__list">
-                                <div class="menu__list-item"><a class="menu__list-link" href="#">Главная</a></div>
-                                <div class="menu__list-item"><a class="menu__list-link" href="#">Обо мне</a></div>
-                                <div class="menu__list-item"><a class="menu__list-link" href="#">Услуги</a></div>
-                                <div class="menu__list-item"><a class="menu__list-link" href="#">Прайс</a></div>
-                                <div class="menu__list-item"><a class="menu__list-link" href="#">Контакты</a></div>
-                            </div>
+                            <ul class="menu__list">
+                                <li class="menu__list-item"><a class="menu__list-link" href="#">Главная</a></li>
+                                <li class="menu__list-item"><a class="menu__list-link" href="#">Обо мне</a></li>
+                                <li class="menu__list-item" data-drop="false">
+                                    <a class="menu__list-link menu__list-services" href="#">Услуги</a>
+                                    <ul class="drop-menu" data-drop-position="absolute">
+                                        <li><img src="./assets/icons/free-icon-vk-2504953.png" alt="" /><a href="#">1</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">1</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__list-item"><a class="menu__list-link" href="#">Прайс</a></li>
+                                <li class="menu__list-item" data-drop="false">
+                                    <a class="menu__list-link menu__list-contacts" href="#">Контакты </a>
+                                    <ul class="drop-menu" data-drop-position="absolute">
+                                        <li><img src="./assets/icons/free-icon-vk-2504953.png" alt="" /><a href="#">1</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">1</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                             <div class="theme-toggle">
                                 <img src="./assets/icons/free-icon-sun-859463.png" alt="" />
                             </div>
@@ -89,7 +103,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="sidebar__menu-item">
+                        <div class="sidebar__menu-item sidebar__menu-services" data-sidebar-drop="false">
                             <a href="#" class="sidebar__menu-link">
                                 <div class="sidebar__block-icon">
                                     <img src="./assets/icons/sidebar/services.png" alt="" />
@@ -131,6 +145,21 @@
                         </div>
                         <div class="sidebar__menu-button">
                             <button class="btn-default btn-gradient-green btn-lg">Оставить заявку</button>
+                        </div>
+                    </div>
+                    <div class="sidebar-drop">
+                        <div class="sidebar-drop__wrapper">
+                            <div class="sidebar-drop__close">
+                                <button class="btn-default btn-gradient-red btn-lg">Назад</button>
+                            </div>
+                            <a href="#" class="sidebar__menu-link">
+                                <div class="sidebar__block-icon">
+                                    <img src="./assets/icons/sidebar/services.png" alt="" />
+                                </div>
+                                <div class="sidebar__block-text">
+                                    <p>Услуги</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
