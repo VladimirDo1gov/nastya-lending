@@ -37,6 +37,7 @@ btnClose.addEventListener("click", (event) => {
 
 //sidebar drop
 sidebarServices.addEventListener("click", (event) => {
+    event.preventDefault();
     // Показывает сайдбар-дроп
     if (sidebarServices.dataset.sidebarDrop === "false") {
         sidebarServices.dataset.sidebarDrop = "true";
