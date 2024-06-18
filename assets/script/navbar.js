@@ -4,6 +4,7 @@ const navbarElements = {
     contacts: document.querySelector(".menu__list-contacts"),
     drop: document.querySelectorAll(".drop-menu"),
     services: document.querySelector(".menu__list-services"),
+    menuList: document.querySelectorAll(".menu__list-item"),
 };
 
 function showMenuBurger() {
@@ -70,13 +71,24 @@ windowEvents.resize();
 
 // dropmenu
 navbarElements.menu.addEventListener("click", (event) => {
+    // При открытии дропа, если уже есть открытый дроп - закарывает его
+    // Попробовать запустить событие клика здесь
+    for (let elem of navbarElements.menuList) {
+        if (elem.dataset.drop === "true") {
+            elem.dataset.drop = "false";
+            let dropElem = elem.querySelector(".drop-menu");
+            dropElem.dataset.dropPosition = "absolute";
+        }
+    }
     if (event.target.closest(".menu__list-item") && event.target.parentNode.dataset.drop !== undefined) {
         event.preventDefault();
-        event.stopPropagation();
-        let drop = event.target.nextElementSibling;
+        let drop = event.target.parentNode.querySelector(".drop-menu"); // Находит дроп внутри родителя
+        // Проверка для отображения
         if (drop.dataset.dropPosition === "absolute") {
-            drop.dataset.dropPosition = "fixed";
+            event.target.parentNode.dataset.drop = "true";
+            drop.dataset.dropPosition = "fixed"; // Отображает дроп
         } else {
+            event.target.parentNode.dataset.drop = "false";
             drop.dataset.dropPosition = "absolute";
         }
     }
@@ -91,10 +103,10 @@ document.body.addEventListener("click", (event) => {
     }
 });
 
-function dropItem(drop) {
-    const rect = navbarElements.contacts.getBoundingClientRect();
-    let y = rect.height + navbarElements.contacts.offsetY;
-    let x = rect.left;
-    drop.style.top = `${y}px`;
-    drop.style.left = `${x}px`;
-}
+// function dropItem(drop) {
+//     const rect = navbarElements.contacts.getBoundingClientRect();
+//     let y = rect.height + navbarElements.contacts.offsetY;
+//     let x = rect.left;
+//     drop.style.top = `${y}px`;
+//     drop.style.left = `${x}px`;
+// }
