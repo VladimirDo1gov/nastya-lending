@@ -7,6 +7,10 @@ const navbarElements = {
     menuList: document.querySelectorAll(".menu__list-item"),
 };
 
+/**
+ * @param {} void
+ * Показывает меню-бургер
+ */
 function showMenuBurger() {
     for (let elem of navbarElements.menu.children) {
         if (!elem.classList.contains("menu__icon")) {
@@ -17,6 +21,10 @@ function showMenuBurger() {
         }
     }
 }
+/**
+ * @param {} void
+ * Скрывает меню-бургер
+ */
 function hideMenuBurger() {
     for (let elem of navbarElements.menu.children) {
         if (elem.dataset.menuPosition === "absolute") {
@@ -24,6 +32,37 @@ function hideMenuBurger() {
         }
         if (elem.classList.contains("menu-burger")) {
             elem.dataset.menuPosition = "absolute";
+        }
+    }
+}
+/**
+ * @param {} void
+ * Показывает/убирает дроп-меню в зависимости от условий
+ * если menu__list-item.dataset.drop === true - дроп-меню высплывает
+ * если menu__list-item.dataset.drop === false - дроп-меню скрывается
+ */
+function displayDropMenu(event) {
+    let drop = event.target.parentNode.querySelector(".drop-menu"); // Находит дроп внутри родителя
+    if (event.target.parentNode.dataset.drop === "false") {
+        checkActiveDrop();
+        event.target.parentNode.dataset.drop = "true";
+        drop.dataset.dropPosition = "fixed"; // Отображает дроп
+    } else {
+        event.target.parentNode.dataset.drop = "false";
+        drop.dataset.dropPosition = "absolute";
+    }
+}
+/**
+ * @param {} void
+ * Проверяет есть ли открытые дропы
+ * Если есть, то закрывает
+ */
+function checkActiveDrop() {
+    for (let elem of navbarElements.menuList) {
+        if (elem.dataset.drop === "true") {
+            elem.dataset.drop = "false";
+            let dropElem = elem.querySelector(".drop-menu");
+            dropElem.dataset.dropPosition = "absolute";
         }
     }
 }
@@ -41,6 +80,7 @@ const windowEvents = {
     },
     scroll() {
         window.addEventListener("scroll", (event) => {
+            checkActiveDrop();
             if (pageYOffset > navbarElements.header.offsetHeight) {
                 navbarElements.header.dataset.header = "fixed";
                 navbarElements.header.dataset.anim = "move";
@@ -71,28 +111,12 @@ windowEvents.resize();
 
 // dropmenu
 navbarElements.menu.addEventListener("click", (event) => {
-    // При открытии дропа, если уже есть открытый дроп - закарывает его
-    // Попробовать запустить событие клика здесь
-    for (let elem of navbarElements.menuList) {
-        if (elem.dataset.drop === "true") {
-            elem.dataset.drop = "false";
-            let dropElem = elem.querySelector(".drop-menu");
-            dropElem.dataset.dropPosition = "absolute";
-        }
-    }
     if (event.target.closest(".menu__list-item") && event.target.parentNode.dataset.drop !== undefined) {
         event.preventDefault();
-        let drop = event.target.parentNode.querySelector(".drop-menu"); // Находит дроп внутри родителя
-        // Проверка для отображения
-        if (drop.dataset.dropPosition === "absolute") {
-            event.target.parentNode.dataset.drop = "true";
-            drop.dataset.dropPosition = "fixed"; // Отображает дроп
-        } else {
-            event.target.parentNode.dataset.drop = "false";
-            drop.dataset.dropPosition = "absolute";
-        }
+        displayDropMenu(event);
     }
 });
+
 document.body.addEventListener("click", (event) => {
     if (!event.target.closest(".menu__list-item")) {
         for (let elem of document.querySelectorAll(".drop-menu")) {
@@ -102,11 +126,3 @@ document.body.addEventListener("click", (event) => {
         }
     }
 });
-
-// function dropItem(drop) {
-//     const rect = navbarElements.contacts.getBoundingClientRect();
-//     let y = rect.height + navbarElements.contacts.offsetY;
-//     let x = rect.left;
-//     drop.style.top = `${y}px`;
-//     drop.style.left = `${x}px`;
-// }
