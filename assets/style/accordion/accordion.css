@@ -10,7 +10,9 @@
     /* padding: 16px 10px; */
     font-size: 16px;
     width: 100%;
-    background-color: aqua;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
     display: block;
     position: relative;
     cursor: pointer;
@@ -55,6 +57,16 @@
     color: #000;
     text-align: left;
     font-size: 16px;
+}
+.accordion-body__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.accordion-bodu__link {
+    padding: 10px 6px;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: var(--border-opacity);
 }
 .accordion-body p {
     text-align: left;

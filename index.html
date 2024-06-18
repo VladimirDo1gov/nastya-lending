@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./assets/style/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./assets/style/style.css" />
         <link rel="stylesheet" href="./assets/fonts/roboto.css" />
-        <link rel="stylesheet" href="./assets/style/accordion.css" />
+        <link rel="stylesheet" href="./assets/style/accordion/accordion.css" />
         <link rel="stylesheet" href="./assets/style/sidebar.css" />
         <link rel="stylesheet" href="./assets/style/popup-window.css" />
         <link rel="stylesheet" href="./assets/style/caces.css" />
@@ -270,7 +270,9 @@
                                     </div>
                                 </div>
                                 <div class="parallax-form-close">
-                                    <button class="btn-close-sm btn-gradient-red">X</button>
+                                    <div class="sidebar__menu-close">
+                                        <button>&times;</button>
+                                    </div>
                                 </div>
                                 <form name="application" action="" method="post">
                                     <div class="form-line">
@@ -281,10 +283,6 @@
                                         <input type="text" name="parentname" id="" placeholder="Отчество*" />
                                         <input type="text" name="telephone" placeholder="Номер телефона" />
                                     </div>
-                                    <!-- <div class="form-line">
-                                        <label for="parallax-select-type">Выберите тип работы:</label>
-                                        <input type="text" name="parallax-select-type" id="parallax-select-type" />
-                                    </div> -->
                                     <label class="" for="parallax-form-date">Выберите дату сдачи:</label>
                                     <input type="date" name="date" id="parallax-form-date" />
                                     <textarea name="description" id="" placeholder="Опишите требования к работе"></textarea>

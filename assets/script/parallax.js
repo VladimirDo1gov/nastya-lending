@@ -72,7 +72,6 @@ const formElements = {
         this.date.value = `${year}-${month}-${Number(day) + 7}`;
     },
 };
-
 const parallaxElements = {
     h1: document.querySelector(".parallax__block-header > h1"),
     h2: document.querySelector(".parallax__block-header > h2"),
@@ -129,7 +128,17 @@ const animParallaxElements = {
 };
 
 window.addEventListener("load", animParallaxElements.showHeader, { once: true });
-parallaxElements.btn.addEventListener("click", animParallaxElements.showForm);
+parallaxElements.btn.addEventListener("click", () => {
+    animParallaxElements.showForm();
+    // при открытии формы, окно скроллится в начало
+    if (window.scrollY > 100) {
+        window.scrollTo({
+            behavior: "smooth",
+            top: 0,
+            left: 0,
+        });
+    }
+});
 parallaxElements.close.addEventListener("click", animParallaxElements.hideForm);
 
 // Скрывает форму заявки
