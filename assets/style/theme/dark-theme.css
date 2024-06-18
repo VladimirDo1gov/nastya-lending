@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: rgb(58, 58, 58) black;
+}
 body {
     background-color: rgb(24, 24, 24);
     color: aliceblue;
