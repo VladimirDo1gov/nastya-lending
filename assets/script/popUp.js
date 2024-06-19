@@ -20,7 +20,7 @@ popup.addEventListener("mouseup", (event) => {
                 popupIcon.dataset.popupShow = "false";
                 popupWindow.style.top = "1000px";
                 popupIcon.dataset.anim = "rotateLeft";
-                event.target.src = "./assets/icons/whatsup.png";
+                event.target.src = "./assets/icons/social/whatsup.png";
             });
         }
     }
