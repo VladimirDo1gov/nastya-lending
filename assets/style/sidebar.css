@@ -76,6 +76,13 @@
     align-items: center;
     cursor: pointer;
 }
+.sidebar__menu-socials {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    padding: 16px 0;
+}
 .sidebar-menu-link-icon > img {
     width: 26px;
 }

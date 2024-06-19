@@ -26,3 +26,6 @@ body {
     box-shadow: var(--box-shadow-dark);
     border: var(--border-color-dark);
 }
+.sidebar__menu-close > button {
+    color: whitesmoke;
+}

@@ -24,7 +24,6 @@
 /*#endregion animation */
 
 /*#region fixed-icon */
-
 .popup {
     position: fixed;
     bottom: 30px;
@@ -96,6 +95,11 @@
     border: var(--border-opacity);
     border-radius: 12px;
     padding: 0 6px;
+    text-decoration: none;
+    color: inherit;
+}
+.popup__link:hover {
+    background-color: rgb(222, 236, 250);
 }
 .popup__link img {
     width: 40px;

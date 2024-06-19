@@ -12,6 +12,8 @@
     gap: 24px;
     position: relative;
     overflow-x: hidden;
+    padding: 6px;
+    user-select: none;
 }
 .conditions__process-block {
     display: flex;
@@ -23,12 +25,19 @@
     text-align: center;
     width: 200px;
     height: 100px;
-    border: var(--border-color-dark);
+    border: var(--border-opacity);
+    box-shadow: var(--box-shadow-light);
     border-radius: 12px;
     position: relative;
     transition: 1s;
 }
-.conditions__process-step > p {
+.conditions__text {
+    text-align: center;
+    padding: 20px 80px;
+    line-height: 26px;
+}
+.conditions__text > p {
+    color: var(--text-opacity);
     width: 100%;
     display: block;
 }

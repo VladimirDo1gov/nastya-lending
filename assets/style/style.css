@@ -180,6 +180,12 @@ html {
     width: 60px;
     height: 60px;
 }
+.icon-scale {
+    transition: 0.3s;
+}
+.icon-scale:hover {
+    transform: scale(1.1, 1.1);
+}
 /*#endregion icon */
 .pt-80 {
     padding-top: 80px;
@@ -189,7 +195,7 @@ html {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .section-padding {
     padding: 40px 10px;
@@ -201,4 +207,10 @@ html {
 .section-title > h2 {
     font-size: 32px;
     letter-spacing: 1px;
+}
+[data-display="none"] {
+    display: none;
+}
+[data-display="initial"] {
+    display: initial;
 }

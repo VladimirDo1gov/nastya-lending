@@ -7,13 +7,13 @@ for (let elem of themeToggle) {
             link.dataset.theme = "dark";
             link.href = "./assets/style/theme/dark-theme.css";
             for (let icon of themeToggleIcon) {
-                icon.src = "./assets/icons/free-icon-moon-phases-178351.png";
+                icon.src = "./assets/icons/moon.png";
             }
         } else {
             link.dataset.theme = "light";
             link.href = "./assets/style/theme/light-theme.css";
             for (let icon of themeToggleIcon) {
-                icon.src = "./assets/icons/free-icon-sun-859463.png";
+                icon.src = "./assets/icons/sun.png";
             }
         }
     });
