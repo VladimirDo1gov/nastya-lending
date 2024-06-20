@@ -67,6 +67,7 @@ header {
     justify-content: start;
     align-items: center;
     gap: 24px;
+    padding: 6px;
     text-decoration: none;
     color: inherit;
 }

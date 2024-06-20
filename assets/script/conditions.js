@@ -66,8 +66,8 @@ function showConditionIcons(ms) {
  */
 function showConditions() {
     if (window.pageYOffset > conditionsEl.offsetY && conditionsEl.getDataConditions === "false") {
-        showConditionBlocks(500);
-        showConditionIcons(400);
+        showConditionBlocks(400);
+        showConditionIcons(300);
         conditionsEl.setDataConditions = "true";
     }
 }
