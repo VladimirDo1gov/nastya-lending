@@ -66,10 +66,13 @@ function showConditionIcons(ms) {
  */
 function showConditions() {
     if (window.pageYOffset > conditionsEl.offsetY && conditionsEl.getDataConditions === "false") {
-        showConditionBlocks(300);
-        showConditionIcons(500);
+        showConditionBlocks(500);
+        showConditionIcons(400);
         conditionsEl.setDataConditions = "true";
     }
 }
+
+//
+let firstArrow = document.querySelector(".conditions__process-arrow-wrapper > img");
 
 window.addEventListener("scroll", showConditions);

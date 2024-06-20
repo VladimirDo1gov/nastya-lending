@@ -11,9 +11,19 @@
     justify-content: center;
     gap: 24px;
     position: relative;
-    overflow-x: hidden;
+    left: -50px;
+    overflow: hidden;
     padding: 6px;
     user-select: none;
+}
+.conditions__process::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 120px;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
 }
 .conditions__process-block {
     display: flex;
@@ -22,6 +32,7 @@
 .conditions__process-step {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     width: 200px;
     height: 100px;
@@ -106,3 +117,20 @@
     }
 }
 /*#endregion conditions animation */
+@media screen and (max-width: 1130px) {
+    .conditions__process {
+        left: -60px;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    .conditions__process {
+        flex-direction: column;
+    }
+    .conditions__process-block {
+        flex-direction: row;
+    }
+    .conditions__process::before {
+        background-color: transparent;
+    }
+}
