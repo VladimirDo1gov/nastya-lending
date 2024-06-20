@@ -1,60 +1,106 @@
 .about-area {
-    position: relative;
+    height: 600px;
 }
-.about {
-    position: relative;
-    overflow: hidden;
-    /* display: flex;
-    gap: 50px;
-    justify-content: center; */
+.about-greed {
+    /* border-top: 6px solid black;
+    border-left: 6px solid black;
+    border: 6px solid black; */
+    padding: 10px;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 400px));
-    grid-template-rows: repeat(3, minmax(100px, 300px));
-    justify-content: center;
-    gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
 }
-.about__img {
-}
-.about__img img {
-    width: 100%;
-    grid-row: 1/3;
-}
-.about__text {
-    width: 100%;
-    grid-column: 2/4;
-    grid-row: 1/2;
-}
-.about__text > * {
-    position: relative;
-    right: -1000px;
-    top: 0;
-}
-
-.about__img-2 {
-    grid-row: 2/3;
-    grid-column: 3/4;
-    height: auto;
-}
-.about__img-2 img {
-    width: 100%;
-    height: auto;
-}
-.about__text-2 {
-    width: 100%;
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-
-.about__img-3 {
-    grid-row: 3/4;
-    grid-column: 1/2;
-}
-.about__img-3 img {
+.about-greed__item {
     width: 100%;
     height: 100%;
 }
-.about__text-3 {
+
+/* Боьшое фото */
+.about-greed__item:nth-child(1) {
+    grid-row: 4/13;
+    grid-column: 1/4;
+}
+/* Маленькое фото */
+.about-greed__item:nth-child(2) {
+    grid-row: 1/6;
+    grid-column: 10/13;
+}
+/* Текст */
+.about-greed__item:nth-child(3) {
+    grid-row: 8/13;
+    grid-column: 8/13;
+}
+/* Заголовок */
+.about-greed__item:nth-child(4) {
+    grid-row: 1/4;
+    grid-column: 1/8;
+    font-size: 32px;
+}
+
+.about-greed__img {
     width: 100%;
-    grid-column: 2/3;
-    grid-row: 3/4;
+    height: 100%;
+}
+.about-greed__img > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.about-greed__img-big > img {
+    min-width: 300px;
+}
+.about-greed__img-small > img {
+    border: 6px solid rgb(235, 91, 91);
+    position: relative;
+
+    right: 20px;
+    min-width: 150px;
+}
+.about-greed__text {
+    width: 100%;
+    height: 100%;
+}
+.about-greed__text > * {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.about-greed__text > p {
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 540px) {
+    .about-area {
+        height: auto;
+    }
+    .about-greed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .about-greed__item {
+        width: 70%;
+    }
+    .about-greed__img-big > img {
+        min-width: 200px;
+    }
+    /* Боьшое фото */
+    .about-greed__item:nth-child(1) {
+        order: 1;
+    }
+    /* Маленькое фото */
+    .about-greed__item:nth-child(2) {
+        order: 3;
+    }
+    /* Текст */
+    .about-greed__item:nth-child(3) {
+        order: 4;
+    }
+    /* Заголовок */
+    .about-greed__item:nth-child(4) {
+        order: 2;
+    }
 }
