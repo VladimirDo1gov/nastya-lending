@@ -1,43 +1,27 @@
 .about-area {
     height: 600px;
+    position: relative;
+}
+.about-bg {
+    position: absolute;
+    width: 2000px;
+    top: 300px;
+    z-index: -1;
+    height: 300px;
+    background-color: rgb(244, 244, 244);
 }
 .about-greed {
-    /* border-top: 6px solid black;
-    border-left: 6px solid black;
-    border: 6px solid black; */
-    padding: 10px;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
+    padding: 20px;
 }
 .about-greed__item {
+    padding: 20px;
     width: 100%;
     height: 100%;
 }
-
-/* Боьшое фото */
-.about-greed__item:nth-child(1) {
-    grid-row: 4/13;
-    grid-column: 1/4;
-}
-/* Маленькое фото */
-.about-greed__item:nth-child(2) {
-    grid-row: 1/6;
-    grid-column: 10/13;
-}
-/* Текст */
-.about-greed__item:nth-child(3) {
-    grid-row: 8/13;
-    grid-column: 8/13;
-}
-/* Заголовок */
-.about-greed__item:nth-child(4) {
-    grid-row: 1/4;
-    grid-column: 1/8;
-    font-size: 32px;
-}
-
 .about-greed__img {
     width: 100%;
     height: 100%;
@@ -51,9 +35,7 @@
     min-width: 300px;
 }
 .about-greed__img-small > img {
-    border: 6px solid rgb(235, 91, 91);
     position: relative;
-
     right: 20px;
     min-width: 150px;
 }
@@ -67,13 +49,53 @@
     margin: 0;
 }
 .about-greed__text > p {
+    padding: 0 6px;
     line-height: 30px;
     word-wrap: break-word;
 }
 
-@media screen and (max-width: 540px) {
+/*#region nth-child */
+
+/* Боьшое фото */
+.about-greed__item:nth-child(1) {
+    grid-row: 4/13;
+    grid-column: 1/4;
+}
+/* Маленькое фото */
+.about-greed__item:nth-child(2) {
+    grid-row: 1/6;
+    grid-column: 10/13;
+}
+/* Текст */
+.about-greed__item:nth-child(3) {
+    grid-row: 7/13;
+    grid-column: 8/13;
+}
+/* Заголовок */
+.about-greed__item:nth-child(4) {
+    grid-row: 1/4;
+    grid-column: 1/8;
+    font-size: 32px;
+}
+/*#endregion nth-child */
+
+@media screen and (max-width: 786px) {
+    /* Заголовок */
+    .about-greed__item:nth-child(4) {
+        font-size: 26px;
+    }
+    .about-greed__item:nth-child(3) {
+        font-size: 15px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 588px) {
     .about-area {
         height: auto;
+    }
+    .about-bg {
+        height: 400px;
     }
     .about-greed {
         display: flex;
@@ -84,8 +106,8 @@
     .about-greed__item {
         width: 70%;
     }
-    .about-greed__img-big > img {
-        min-width: 200px;
+    .about-greed__img-small > img {
+        right: 0;
     }
     /* Боьшое фото */
     .about-greed__item:nth-child(1) {
