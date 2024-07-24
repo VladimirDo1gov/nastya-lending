@@ -131,13 +131,13 @@ window.addEventListener("load", animParallaxElements.showHeader, { once: true })
 parallaxElements.btn.addEventListener("click", () => {
     animParallaxElements.showForm();
     // при открытии формы, окно скроллится в начало
-    if (window.scrollY > 100) {
-        window.scrollTo({
-            behavior: "smooth",
-            top: 0,
-            left: 0,
-        });
-    }
+    // if (window.scrollY > 100) {
+    //     window.scrollTo({
+    //         behavior: "smooth",
+    //         top: 0,
+    //         left: 0,
+    //     });
+    // }
 });
 parallaxElements.close.addEventListener("click", animParallaxElements.hideForm);
 

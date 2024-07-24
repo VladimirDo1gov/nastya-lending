@@ -1,0 +1,22 @@
+{
+    "name": "nastya",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "cross-env NODE_ENV=development PORT=3030 nodemon ./app"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^3.1.4"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "cross-env": "^7.0.3",
+        "ejs": "^3.1.10",
+        "express": "^4.19.2"
+    }
+}
